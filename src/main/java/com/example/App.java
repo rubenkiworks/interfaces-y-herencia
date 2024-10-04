@@ -46,7 +46,39 @@ public class App {
 
         Estudiante estudiante2 = Estudiante.builder().nombre("ivan").genero(Genero.HOMBRE).totalAsignauras(10).build();
 
-        System.out.println(estudiante2);
+        //System.out.println(estudiante2);
 
+        /**
+         * Ejercicio # 1.
+         * 
+         * Crear una rama y llamarle "solucion-ejercio-1"
+         * 
+         * Crear una clase Bicicleta, abstracta, que contenga todas las propiedades
+         * que son comunes a todos las bicicletas
+         * 
+         * Hacer que las bicis de montaña y electrica hereden de la clase Bicicleta
+         * 
+         * Crear objetos de tipo bici de Montaña y Electrica e imprimirlos por la
+         * consola
+         *
+         */
+
+        MountainBike mountainBike = MountainBike.builder()
+                .marca("Nissu")
+                .engranajes(10)
+                .sillin(1)
+                .velocidad(78.7)
+                .grosorNeumatico("Muy grueso")
+                .build();
+        System.out.println(mountainBike);
+
+        ElectricalBike electricalBike = ElectricalBike.builder()
+                .marca("Noconozco")
+                .engranajes(5)
+                .sillin(2)
+                .velocidad(120)
+                .autonomia(Autonomia.ALTA)
+                .build();
+        System.out.println(electricalBike);
     }
 }

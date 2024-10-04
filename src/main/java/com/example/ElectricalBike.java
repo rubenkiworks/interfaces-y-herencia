@@ -1,11 +1,19 @@
 package com.example;
 
-public class ElectricalBike implements Bicicletas{
-    
-    private String marca;
-    private int sillin;
-    private int engranajes;
-    private double velocidad;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@SuperBuilder
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+public class ElectricalBike extends Bicicleta implements Bicicletas{
 
     private Autonomia autonomia;
 

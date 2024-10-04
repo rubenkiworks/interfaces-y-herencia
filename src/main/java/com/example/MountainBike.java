@@ -1,11 +1,19 @@
 package com.example;
 
-public class MountainBike implements Bicicletas{
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
-    private String marca;
-    private int sillin;
-    private int engranajes;
-    private double velocidad;
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@SuperBuilder
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+public class MountainBike extends Bicicleta implements Bicicletas{
 
     private String grosorNeumatico;
 
